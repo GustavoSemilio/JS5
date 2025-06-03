@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+	window.onload = inicio;
+
+	    let imgLigada = 'https://i.ibb.co/d4mZ5k0Y/Captura-de-Tela-2025-06-02-s-16-08-21.png';
+	    let imgDesligada = 'https://i.ibb.co/hRHPxcnP/Captura-de-Tela-2025-06-02-s-16-08-01.png';
+        let imgVela = 'https://www.shutterstock.com/shutterstock/videos/1060483951/thumb/5.jpg?ip=x480'
+
+	function inicio() {
+	    let imagem = document.getElementById('imagem');
+	    imagem.src = imgDesligada;
+
+        let buttonA = document.getElementById('btnLigar');
+        buttonA.addEventListener('click', liga);
+
+	    let buttonB = document.getElementById('btnDesligar');
+        buttonB.addEventListener('click',  desliga);
+        
+        let ButtonC = document.getElementById('btnVela');
+        ButtonC.addEventListener('click', vela);
+	}
+	function liga() {
+          let buttonA = document.getElementById('Ligar');
+          imagem.src = imgLigada;
+    }
+	function desliga() {
+	     let buttonB = document.getElementById('Desligar');
+          imagem.src = imgDesligada;
+    }
+    function vela() {
+        let ButtonC = document.getElementById('Vela');
+        imagem.src = imgVela;
+    }
+
+	
+    </script>
+</head>
+<body>
+    <img src="" alt="" id="imagem"><br>
+    <input type="button" value="Ligar" id="btnLigar">
+    <input type="button" value="Desligar" id="btnDesligar">
+    <input type="button" value="Vela" id="btnVela">
+</body>
+</html>
